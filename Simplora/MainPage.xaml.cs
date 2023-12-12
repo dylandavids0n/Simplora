@@ -9,7 +9,7 @@ public partial class MainPage : ContentPage
 
 	private void OnSearchClicked(object sender, EventArgs e)
 	{
-		InputText.Text = UrlEntry.Text;
+		WebWindow.Source = UrlEntry.Text;
 	}
 
 	private void OnEntryTextChanged(object sender, EventArgs e)

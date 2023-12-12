@@ -1,31 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Simplora.MainPage">
 
-    <ScrollView>
-        <Label Text="Name" />
-        <Entry />
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            
-            <Entry x:Name="UrlEntry"
-                Placeholder="Enter text"
-                TextChanged="OnEntryTextChanged"
-                Completed="OnEntryCompleted" />
+    <FlexLayout Direction="Column"
+            AlignItems="Center">
+        
+        <Entry x:Name="UrlEntry"
+            Placeholder="Enter text"
+            TextChanged="OnEntryTextChanged"
+            Completed="OnEntryCompleted" />
 
-            <Button
-                x:Name="SearchBtn"
-                Text="Search" 
-                SemanticProperties.Hint="Searches for Url"
-                Clicked="OnSearchClicked"
-                HorizontalOptions="Fill" />
+        <Button
+            x:Name="SearchBtn"
+            Text="Search" 
+            SemanticProperties.Hint="Searches for Url"
+            Clicked="OnSearchClicked"
+            HorizontalOptions="Fill" />
 
-            <Label x:Name="InputText"
-                Text="Hello world" />
-                
-        </VerticalStackLayout>
-    </ScrollView>
+        <WebView x:Name="WebWindow"
+            Source="https://learn.microsoft.com/dotnet/maui" 
+            WidthRequest="800"
+            HeightRequest="800" />
+    </FlexLayout>
 
 </ContentPage>

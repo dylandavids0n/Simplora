@@ -4,8 +4,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Simplora.MainPage">
 
-    <FlexLayout Direction="Column"
-            AlignItems="Center">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
         
         <Entry x:Name="UrlEntry"
             Placeholder="Enter text"
@@ -14,15 +21,15 @@
 
         <Button
             x:Name="SearchBtn"
+            Grid.Row="1"
             Text="Search" 
             SemanticProperties.Hint="Searches for Url"
             Clicked="OnSearchClicked"
             HorizontalOptions="Fill" />
 
         <WebView x:Name="WebWindow"
-            Source="https://learn.microsoft.com/dotnet/maui" 
-            WidthRequest="800"
-            HeightRequest="800" />
-    </FlexLayout>
+            Grid.Row="2"
+            Source="https://learn.microsoft.com/dotnet/maui" />
+    </Grid>
 
 </ContentPage>

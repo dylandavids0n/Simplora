@@ -5,7 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Simplora"
     Shell.FlyoutBehavior="Disabled"
-    Title="Simplora">
+    Title="Simplora"
+    NavBarIsVisible="false">
 
     <ShellContent
         Title="Home"

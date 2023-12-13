@@ -19,7 +19,7 @@ public partial class MainPage : ContentPage
 
 	private void OnEntryCompleted(object sender, EventArgs e)
 	{
-		//do nothing for now.
+		WebWindow.Source = UrlEntry.Text;
 	}
 }
 

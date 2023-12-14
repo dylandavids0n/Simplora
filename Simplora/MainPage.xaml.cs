@@ -12,6 +12,21 @@ public partial class MainPage : ContentPage
 		WebWindow.Source = UrlEntry.Text;
 	}
 
+	private void OnBackClicked(object sender, EventArgs e)
+	{
+		//do nothing for now.
+	}
+
+	private void OnForwardClicked(object sender, EventArgs e)
+	{
+		//do nothing for now.
+	}
+
+	private void OnRefreshClicked(object sender, EventArgs e)
+	{
+		WebWindow.Reload();
+	}
+
 	private void OnEntryTextChanged(object sender, EventArgs e)
 	{
 		//do nothing for now.

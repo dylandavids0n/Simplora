@@ -11,14 +11,40 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60" />
+            <ColumnDefinition Width="60" />
+            <ColumnDefinition Width="60" />
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200" />
         </Grid.ColumnDefinitions>
         
-        <Entry x:Name="UrlEntry"
+        <Button
+            x:Name="BackBtn"
+            Grid.Row="0"
+            Grid.Column="0"
+            Text="B" 
+            SemanticProperties.Hint="Back Web Page"
+            Clicked="OnBackClicked" />
+        
+        <Button
+            x:Name="ForwardBtn"
             Grid.Row="0"
             Grid.Column="1"
+            Text="F" 
+            SemanticProperties.Hint="Forward Web Page"
+            Clicked="OnForwardClicked" />
+        
+        <Button
+            x:Name="RefreshBtn"
+            Grid.Row="0"
+            Grid.Column="2"
+            Text="R" 
+            SemanticProperties.Hint="Refresh Web Page"
+            Clicked="OnRefreshClicked" />
+
+        <Entry x:Name="UrlEntry"
+            Grid.Row="0"
+            Grid.Column="3"
             Placeholder="Enter text"
             TextChanged="OnEntryTextChanged"
             Completed="OnEntryCompleted" />
@@ -34,7 +60,7 @@
 
         <WebView x:Name="WebWindow"
             Grid.Row="1"
-            Grid.ColumnSpan="3"
+            Grid.ColumnSpan="5"
             Source="https://learn.microsoft.com/dotnet/maui" />
     </Grid>
 

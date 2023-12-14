@@ -14,12 +14,12 @@ public partial class MainPage : ContentPage
 
 	private void OnBackClicked(object sender, EventArgs e)
 	{
-		//do nothing for now.
+		if (WebWindow.CanGoBack) WebWindow.GoBack();
 	}
 
 	private void OnForwardClicked(object sender, EventArgs e)
 	{
-		//do nothing for now.
+		if (WebWindow.CanGoForward) WebWindow.GoForward();
 	}
 
 	private void OnRefreshClicked(object sender, EventArgs e)

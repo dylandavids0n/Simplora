@@ -18,27 +18,27 @@
             <ColumnDefinition Width="200" />
         </Grid.ColumnDefinitions>
         
-        <Button
+        <ImageButton
             x:Name="BackBtn"
+            Source="left.png"
             Grid.Row="0"
             Grid.Column="0"
-            Text="B" 
             SemanticProperties.Hint="Back Web Page"
             Clicked="OnBackClicked" />
         
-        <Button
+        <ImageButton
             x:Name="ForwardBtn"
+            Source="right.png"
             Grid.Row="0"
             Grid.Column="1"
-            Text="F" 
             SemanticProperties.Hint="Forward Web Page"
             Clicked="OnForwardClicked" />
         
-        <Button
+        <ImageButton
             x:Name="RefreshBtn"
+            Source="reload.png"
             Grid.Row="0"
             Grid.Column="2"
-            Text="R" 
             SemanticProperties.Hint="Refresh Web Page"
             Clicked="OnRefreshClicked" />
 
